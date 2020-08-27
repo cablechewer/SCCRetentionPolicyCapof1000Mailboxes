@@ -6,6 +6,7 @@ This script divides users by department, and then alphabetically into different 
 If there are 10 departments then the script will create at least 260 retention policies.  If some departments employ more than 1000 people, whose email address starts with the same letter the script will create multiple policies.
 
 Implementation Details
+
 Since replication of retention policies can be slow the script will save out the list of users in each policy.  If that list does not need to change from one day to the next, then that policy and the associated file is not updated.
 
 For each policy that is created or updated a CSV file is written to the folder from which the script runs.  The files are overwritten on each execution where the policy is created or changed.
