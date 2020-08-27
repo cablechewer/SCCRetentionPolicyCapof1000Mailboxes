@@ -1,5 +1,6 @@
 # SCCRetentionPolicyCapof1000Mailboxes
 Purpose
+
 This script is meant to deal with the situation where an Office 365 admin has thousands of users that need to be individually added to Security and Compliance Center policies.  At this time those policies are limited to 1000 mailboxes per policy.
 This script divides users by department, and then alphabetically into different Retention Policies.  
 If there are 10 departments then the script will create at least 260 retention policies.  If some departments employ more than 1000 people, whose email address starts with the same letter the script will create multiple policies.
