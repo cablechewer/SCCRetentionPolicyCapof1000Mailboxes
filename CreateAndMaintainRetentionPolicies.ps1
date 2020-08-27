@@ -1,8 +1,5 @@
 # This script divides users by department, and then alphabetically into different
 # Retention Policies.  Each policy has a cap of 1000 mailboxes.
-# As written the script assumes that only active mailboxes are part of the retention policies.
-# It is assumed that inactive mailboxes can be removed from the policies, and that
-# other procedures in the organization will see to their needs.
 # 
 # Since replication of retention policies can be slow the script will save out the 
 # list of users in each policy.  If that list does not need to change from one day
@@ -25,6 +22,11 @@
 # At time of writing this is assumed to be the fields PrimarySMTPAddress and CustomAttribute10.
 # This will need to be customized by each admin.
 # Recommend the file be pulled with invoke-command or the new V2 get-mailbox that runs a lot faster. 
+#
+# Created 8/20/2020
+# Created by Chris Pollitt
+# Last edit: 8/27/2020
+# Last successful run:
 
 
 # ******************************************************************************
