@@ -13,10 +13,13 @@ For each policy that is created or updated a CSV file is written to the folder f
 
 It is assumed each division has a different policy.  The Divisions should be saved to a CSV file following this format (field headings and 2 example lines):
 DivisionName, RetentionDuration, DateOption, Action
+
 accounting,2557,CreationAgeInDays,KeepAndDelete
+
 Development,2557,ModificationAgeInDays,Keep
 
 This script utilizes the admin's existing connection to Security and Compliance Center PowerShell.  It makes no attempt to connect to Exchange PowerShell.   Prior to running the script, the list of mailboxes must be pulled into a CSV file.  That CSV file must contain the email address to be used, and the property that specifies which division the mailbox belongs to.
+
 At time of writing this is assumed to be the fields PrimarySMTPAddress and CustomAttribute10.  This will need to be customized by each admin.
 Recommend the list of mailboxes be pulled with invoke-command or the new V2 get-mailbox that runs a lot faster than a regular get-mailbox. 
 
